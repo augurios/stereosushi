@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html class="full" style="background-image:url(img/ssbackground.png)" lang="en">
+<!-- Make sure the <html> tag is set to the .full CSS class. Change the background image in the full.css file. -->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>The Big Picture - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/the-big-picture.css" rel="stylesheet">
+    
+    <link href="css/styles.css" rel="stylesheet">
+	
+	
+	<script src="//use.typekit.net/pie7isx.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+	
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+<script src="js/jquery.js"></script>
+    
+<script>
+	    $(document).ready(function() {
+	
+	if ($(window).width() > 768 /*&& $('html').is('.cssgradients')*/ ) {
+		
+		var vid = document.getElementById("bgvid");
+		
+		$("#bgvid").html('<source src="ssvideo.webm" type="video/webm"></source>' );
+		$("#bgvid").html('<source src="ssvideo.mp4" type="video/mp4"></source>' );
+	
+		//vid.load();
+		//vid.play();
+		function vidFade() {
+		  vid.classList.add("stopfade");
+		}
+		
+		vid.addEventListener('ended', function()
+		{
+		// only functional if "loop" is removed 
+		vid.pause();
+		// to capture IE10
+		vidFade();
+		}); 
+		
+		
+		
+		
+    } else {
+	    	
+		$("#bgvid").hide();
+    }
+    
+    $('a.closethis').bind('click', function(event) {
+	        
+	        event.preventDefault();
+	    });
+        
+});
+    </script>    
+<style>
+	.animation-target {
+  -webkit-animation: animation 1250ms linear infinite both;
+  animation: animation 1250ms linear infinite both;
+}
+.page-head svg.animation-bounce {
+	width: 270px;
+	margin: 50% auto 0;
+	-webkit-transition: all 0.6s ease;
+	-moz-transition: all 0.6s ease;
+	-ms-transition: all 0.6s ease;
+	-o-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+}
+#Layer_3 g {
+	-webkit-transition: all 0.6s ease;
+	-moz-transition: all 0.6s ease;
+	-ms-transition: all 0.6s ease;
+	-o-transition: all 0.6s ease;
+	transition: all 0.6s ease;
+	opacity: 0;
+}
+.loaded #Layer_3 .animation-target {
+  -webkit-animation: animation 9250ms linear infinite both;
+  animation: animation 9250ms linear infinite both;
+}
+
+@-webkit-keyframes animation { 
+  0% {
+  	  fill:#FFFFFF; 
+	  stroke:#FFFFFF;
+  }
+  30% {
+	  fill:#9d4a91; 
+	  stroke:#9d4a91;
+  }
+  60% {
+	  fill:#60aad9; 
+	  stroke:#60aad9;
+  }
+  100% {
+	  fill:#FFFFFF; 
+	  stroke:#FFFFFF;
+  }
+}
+
+@keyframes animation { 
+  0% {
+  	  fill:#FFFFFF; 
+	  stroke:#FFFFFF;
+  }
+  30% {
+	  fill:#9d4a91; 
+	  stroke:#9d4a91;
+  }
+  60% {
+	  fill:#60aad9; 
+	  stroke:#60aad9;
+  }
+  100% {
+	  fill:#FFFFFF; 
+	  stroke:#FFFFFF;
+  }
+}
+
+.animation-bounce {
+  -webkit-animation: animation-bounce 1250ms linear infinite both;
+  animation: animation-bounce 1250ms linear infinite both;
+}
+
+.loaded svg.animation-bounce {
+  -webkit-animation: none;
+  animation: none;
+}
+
+
+
+
+@-webkit-keyframes animation-bounce { 
+  0% {
+  	  -moz-transform: scale(1);
+	-webkit-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+  }
+  30% {
+	  -moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+  }
+  60% {
+	  -moz-transform: scale(1.07);
+	-webkit-transform: scale(1.07);
+	-o-transform: scale(1.07);
+	-ms-transform: scale(1.07);
+	transform: scale(1.07);
+  }
+  100% {
+	   -moz-transform: scale(1);
+	-webkit-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+  }
+}
+
+@keyframes animation-bounce { 
+  0% {
+  	  -moz-transform: scale(1);
+	-webkit-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+  }
+  30% {
+	  -moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+  }
+  60% {
+	  -moz-transform: scale(1.07);
+	-webkit-transform: scale(1.07);
+	-o-transform: scale(1.07);
+	-ms-transform: scale(1.07);
+	transform: scale(1.07);
+  }
+  100% {
+	   -moz-transform: scale(1);
+	-webkit-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+  }
+}
+</style>
+</head>
+
+<body>
+	<video autoplay id="bgvid" loop muted></video>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand reservate-on" href="#"><span class="icon icon-basic-book"></span> Reservar</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                	<li class="only-desk">
+                        <a href="#" class="reservate-on"><span class="icon icon-basic-book"></span> <span class="menu-label">Reservar</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="about-on"><span class="icon icon-basic-eye"></span> <span class="menu-label">About</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/Stereosushiss" target="_blank"><span class="icon icon-basic-world"></span> <span class="menu-label">Like us!</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="contact-on"><span class="icon icon-basic-headset"></span> <span class="menu-label">Contacto</span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 page-head">
+                <svg class="animation-bounce" x="0px" y="0px"
+	 viewBox="0 0 800 480" enable-background="new 0 0 800 480" xml:space="preserve" preserveAspectRatio="none">
+<g id="Layer_4">
+</g>
+<g id="Layer_5">
+</g>
+<g id="Layer_6">
+</g>
+<g id="Layer_3" >
+	<path fill="#FFFFFF" class="animation-target" d="M227.5,20c0,0,1.2-5.7,3.1,0c6.3,19.4,45.7,62,73.9,77.7c-1.8-5.5-5.7-10.7-10.6-15.7c0,0-2.2-2.8,2.1-1.6
+		c10.4,3,31.5,14.6,39.2,25c12.5,16.8,14.4,27.1,14.4,27.1S337,149,331.5,163.8c0,0-14.7,38.1,12.2,66.9
+		c26.6,28.4,43.1,31.7,43.1,31.7S267.9,264.6,236,187c0,0-0.4-2.2,1.5-0.6c7.2,6.2,27.2,25.1,36.8,28.6c0,0-41.6-33.2-44.8-59.1
+		c0,0,0-2.5,1-1.2c4.4,5.7,23.6,22.4,35.2,26.6c0,0-42.4-29.1-40.2-82.5c0,0,0.6-3.9,2.1,0.2c4.3,11.9,19.3,34.3,38.1,37.3
+		C265.7,136.3,215.4,95.3,227.5,20z"/>
+	<path fill="#FFFFFF" class="animation-target" d="M265.7,239.7c0,0-1.2-1.5,1.6,0c13.4,7,59.6,29.3,116.2,27.8C383.5,267.5,300.8,281.8,265.7,239.7z"/>
+	<path fill="#FFFFFF" class="animation-target" d="M578,20c0,0-1.2-5.7-3.1,0c-6.3,19.4-45.7,62-73.9,77.7c1.8-5.5,5.7-10.7,10.6-15.7c0,0,2.2-2.8-2.1-1.6
+		c-10.4,3-31.5,14.6-39.2,25c-12.5,16.8-14.4,27.1-14.4,27.1s12.6,16.5,18.1,31.2c0,0,14.7,38.1-12.2,66.9
+		c-26.6,28.4-43.1,31.7-43.1,31.7s118.9,2.2,150.8-75.4c0,0,0.4-2.2-1.5-0.6c-7.2,6.2-27.2,25.1-36.8,28.6c0,0,41.6-33.2,44.8-59.1
+		c0,0,0-2.5-1-1.2c-4.4,5.7-23.6,22.4-35.2,26.6c0,0,42.4-29.1,40.2-82.5c0,0-0.6-3.9-2.1,0.2c-4.3,11.9-19.3,34.3-38.1,37.3
+		C539.9,136.3,590.1,95.3,578,20z"/>
+	<path fill="#FFFFFF" class="animation-target" d="M539.9,239.7c0,0,1.2-1.5-1.6,0c-13.4,7-59.6,29.3-116.2,27.8C422,267.5,504.7,281.8,539.9,239.7z"/>
+	<polygon fill="#FFFFFF" class="animation-target" points="409.7,181.2 424.5,181.2 449.4,161.5 449.4,227.7 423.6,209 409.7,209 	"/>
+	<polygon fill="#FFFFFF" class="animation-target" points="400.8,181.2 386,181.2 361.1,161.5 361.1,227.7 387,209 400.8,209 	"/>
+	<polygon fill="#FFFFFF" class="animation-target" points="386.8,156.4 388.2,157.4 443.1,92 432.7,87 	"/>
+	<polygon fill="#FFFFFF" class="animation-target" points="422.4,156.4 421,157.4 366.2,92 376.5,87 	"/>
+	<g>
+		<path fill="#FFFFFF" d="M76,333.7c-0.2,0.4-0.5,0.6-0.9,0.6c-0.4,0-1-0.4-1.7-1.1c-0.7-0.7-1.7-1.5-3-2.4c-1.3-0.9-3-1.7-5-2.4
+			c-2-0.7-4.6-1.1-7.6-1.1c-3.1,0-5.8,0.5-8.1,1.4c-2.4,0.9-4.3,2.1-5.9,3.7c-1.6,1.6-2.8,3.4-3.6,5.4c-0.8,2-1.2,4.2-1.2,6.4
+			c0,2.9,0.6,5.3,1.7,7.2c1.2,1.9,2.7,3.5,4.6,4.8c1.9,1.3,4,2.4,6.4,3.3c2.4,0.9,4.9,1.8,7.4,2.6c2.5,0.8,5,1.7,7.4,2.7
+			s4.6,2.1,6.4,3.6c1.9,1.5,3.4,3.2,4.6,5.4c1.2,2.1,1.7,4.8,1.7,8c0,3.2-0.5,6.3-1.6,9.1c-1.1,2.8-2.7,5.3-4.8,7.4
+			c-2.1,2.1-4.7,3.8-7.7,5c-3,1.2-6.5,1.8-10.4,1.8c-2.6,0-5-0.2-7.2-0.7c-2.1-0.5-4.1-1.1-5.9-2c-1.8-0.9-3.5-1.9-5-3.2
+			c-1.5-1.3-3-2.7-4.3-4.3l0.7-1.1c0.2-0.2,0.3-0.3,0.5-0.4c0.1-0.1,0.3-0.1,0.6-0.1c0.3,0,0.6,0.2,1.1,0.7c0.5,0.5,1.1,1,1.8,1.7
+			c0.7,0.7,1.6,1.4,2.7,2.2c1,0.8,2.3,1.5,3.7,2.2c1.4,0.7,3.1,1.3,5,1.7c1.9,0.5,4,0.7,6.4,0.7c3.4,0,6.4-0.5,9.1-1.6
+			c2.7-1.1,4.9-2.5,6.8-4.4c1.8-1.8,3.2-4,4.2-6.4c1-2.5,1.5-5.1,1.5-7.9c0-3-0.6-5.4-1.7-7.4c-1.2-1.9-2.7-3.6-4.5-4.9
+			c-1.9-1.3-4-2.4-6.4-3.3c-2.4-0.9-4.9-1.7-7.4-2.5c-2.5-0.8-5-1.7-7.4-2.6c-2.4-0.9-4.6-2.2-6.4-3.6c-1.9-1.5-3.4-3.3-4.5-5.5
+			c-1.2-2.2-1.7-4.9-1.7-8.2c0-2.6,0.5-5,1.5-7.4c1-2.3,2.4-4.4,4.2-6.2c1.8-1.8,4.1-3.2,6.8-4.3c2.7-1.1,5.8-1.6,9.3-1.6
+			c3.9,0,7.4,0.6,10.5,1.9c3,1.3,5.9,3.2,8.5,5.9L76,333.7z"/>
+		<path fill="#FFFFFF" d="M148.2,325.6v2.7h-28.8v75.8h-3.1v-75.8H87.5v-2.7H148.2z"/>
+		<path fill="#FFFFFF" d="M208.6,325.6v2.6h-43.3V363h36.5v2.6h-36.5v35.9h43.4l-0.1,2.6h-46.3v-78.5H208.6z"/>
+		<path fill="#FFFFFF" d="M230.3,367.1v37h-3.1v-78.5h18.9c8.5,0,15,1.7,19.4,5c4.4,3.3,6.6,8.3,6.6,15.1c0,3.1-0.6,5.9-1.7,8.4
+			c-1.2,2.5-2.8,4.7-4.9,6.6c-2.1,1.8-4.6,3.3-7.6,4.4c-3,1.1-6.3,1.7-9.9,2c0.7,0.4,1.3,0.9,2,1.7l29.2,35.5h-2.5
+			c-0.4,0-0.8-0.1-1.1-0.2c-0.3-0.1-0.6-0.4-0.9-0.8l-27.7-33.9c-0.3-0.4-0.6-0.7-0.9-1c-0.3-0.3-0.7-0.5-1.1-0.6
+			c-0.4-0.2-0.9-0.3-1.4-0.4c-0.5-0.1-1.2-0.1-2-0.1H230.3z M230.3,364.8h15c3.7,0,7-0.4,10-1.3c3-0.9,5.5-2.1,7.5-3.8
+			c2.1-1.7,3.6-3.7,4.7-6c1.1-2.3,1.6-5,1.6-7.9c0-6.1-2-10.5-5.9-13.4c-3.9-2.9-9.6-4.3-17.1-4.3h-15.9V364.8z"/>
+		<path fill="#FFFFFF" d="M340.2,325.6v2.6h-43.3V363h36.5v2.6h-36.5v35.9h43.4l-0.1,2.6h-46.3v-78.5H340.2z"/>
+		<path fill="#FFFFFF" d="M425.2,364.8c0,6.1-0.9,11.7-2.7,16.6c-1.8,4.9-4.3,9.1-7.5,12.6c-3.2,3.5-7.1,6.2-11.6,8
+			c-4.5,1.9-9.5,2.8-15,2.8c-5.4,0-10.3-0.9-14.9-2.8c-4.5-1.9-8.4-4.5-11.6-8c-3.2-3.5-5.8-7.7-7.5-12.6
+			c-1.8-4.9-2.7-10.5-2.7-16.6c0-6.1,0.9-11.6,2.7-16.6c1.8-5,4.3-9.2,7.5-12.6c3.2-3.5,7.1-6.2,11.6-8.1c4.5-1.9,9.5-2.8,14.9-2.8
+			c5.5,0,10.5,0.9,15,2.8c4.5,1.9,8.4,4.6,11.6,8c3.2,3.5,5.8,7.7,7.5,12.6C424.3,353.1,425.2,358.7,425.2,364.8z M421.9,364.8
+			c0-5.8-0.8-11.1-2.4-15.7c-1.6-4.6-3.9-8.6-6.9-11.8c-3-3.2-6.5-5.7-10.6-7.4c-4.1-1.7-8.7-2.6-13.7-2.6c-4.9,0-9.4,0.9-13.5,2.6
+			c-4.1,1.7-7.6,4.2-10.6,7.4c-3,3.2-5.3,7.2-6.9,11.8c-1.7,4.6-2.5,9.9-2.5,15.7c0,5.8,0.8,11.1,2.5,15.7c1.7,4.6,4,8.6,6.9,11.8
+			c3,3.2,6.5,5.7,10.6,7.4c4.1,1.7,8.6,2.6,13.5,2.6c5,0,9.5-0.9,13.7-2.6c4.1-1.7,7.6-4.2,10.6-7.4c3-3.2,5.2-7.1,6.9-11.8
+			C421.1,375.9,421.9,370.7,421.9,364.8z"/>
+		<path fill="#FFFFFF" d="M513.1,333.7c-0.2,0.4-0.5,0.6-0.9,0.6c-0.4,0-1-0.4-1.7-1.1c-0.7-0.7-1.7-1.5-3-2.4c-1.3-0.9-3-1.7-5-2.4
+			c-2-0.7-4.6-1.1-7.6-1.1c-3.1,0-5.8,0.5-8.1,1.4c-2.4,0.9-4.3,2.1-5.9,3.7c-1.6,1.6-2.8,3.4-3.6,5.4c-0.8,2-1.2,4.2-1.2,6.4
+			c0,2.9,0.6,5.3,1.7,7.2c1.2,1.9,2.7,3.5,4.6,4.8c1.9,1.3,4,2.4,6.4,3.3c2.4,0.9,4.9,1.8,7.4,2.6c2.5,0.8,5,1.7,7.4,2.7
+			s4.6,2.1,6.4,3.6c1.9,1.5,3.4,3.2,4.6,5.4c1.2,2.1,1.7,4.8,1.7,8c0,3.2-0.5,6.3-1.6,9.1c-1.1,2.8-2.7,5.3-4.8,7.4
+			c-2.1,2.1-4.7,3.8-7.7,5c-3,1.2-6.5,1.8-10.4,1.8c-2.6,0-5-0.2-7.2-0.7c-2.1-0.5-4.1-1.1-5.9-2c-1.8-0.9-3.5-1.9-5-3.2
+			c-1.5-1.3-3-2.7-4.3-4.3l0.7-1.1c0.2-0.2,0.3-0.3,0.5-0.4c0.1-0.1,0.3-0.1,0.6-0.1c0.3,0,0.6,0.2,1.1,0.7c0.5,0.5,1.1,1,1.8,1.7
+			c0.7,0.7,1.6,1.4,2.7,2.2c1,0.8,2.3,1.5,3.7,2.2c1.4,0.7,3.1,1.3,5,1.7c1.9,0.5,4,0.7,6.4,0.7c3.4,0,6.4-0.5,9.1-1.6
+			s4.9-2.5,6.8-4.4c1.8-1.8,3.2-4,4.2-6.4c1-2.5,1.5-5.1,1.5-7.9c0-3-0.6-5.4-1.7-7.4c-1.2-1.9-2.7-3.6-4.5-4.9
+			c-1.9-1.3-4-2.4-6.4-3.3c-2.4-0.9-4.9-1.7-7.4-2.5c-2.5-0.8-5-1.7-7.4-2.6c-2.4-0.9-4.6-2.2-6.4-3.6c-1.9-1.5-3.4-3.3-4.5-5.5
+			c-1.2-2.2-1.7-4.9-1.7-8.2c0-2.6,0.5-5,1.5-7.4c1-2.3,2.4-4.4,4.2-6.2c1.8-1.8,4.1-3.2,6.8-4.3c2.7-1.1,5.8-1.6,9.3-1.6
+			c3.9,0,7.4,0.6,10.5,1.9c3,1.3,5.9,3.2,8.5,5.9L513.1,333.7z"/>
+		<path fill="#FFFFFF" d="M563.3,402.3c4.1,0,7.7-0.7,10.9-2.1c3.2-1.4,5.9-3.4,8.1-5.9c2.2-2.5,3.9-5.4,5.1-8.8
+			c1.2-3.4,1.8-7,1.8-10.9v-49h3.1v49c0,4.2-0.7,8.2-2,11.9c-1.3,3.7-3.3,6.9-5.8,9.7c-2.5,2.8-5.5,4.9-9.1,6.5
+			c-3.6,1.6-7.6,2.4-12,2.4c-4.5,0-8.5-0.8-12.1-2.4c-3.6-1.6-6.6-3.7-9.1-6.5c-2.5-2.8-4.4-6-5.8-9.7c-1.3-3.7-2-7.7-2-11.9v-49
+			h3.1v48.9c0,3.9,0.6,7.5,1.8,10.9c1.2,3.4,2.9,6.3,5.1,8.8c2.2,2.5,4.9,4.5,8.1,5.9C555.6,401.6,559.2,402.3,563.3,402.3z"/>
+		<path fill="#FFFFFF" d="M653.2,333.7c-0.2,0.4-0.5,0.6-0.9,0.6c-0.4,0-1-0.4-1.7-1.1c-0.7-0.7-1.7-1.5-3-2.4c-1.3-0.9-3-1.7-5-2.4
+			c-2-0.7-4.6-1.1-7.6-1.1c-3.1,0-5.8,0.5-8.1,1.4c-2.4,0.9-4.3,2.1-5.9,3.7c-1.6,1.6-2.8,3.4-3.6,5.4c-0.8,2-1.2,4.2-1.2,6.4
+			c0,2.9,0.6,5.3,1.7,7.2c1.2,1.9,2.7,3.5,4.6,4.8c1.9,1.3,4,2.4,6.4,3.3c2.4,0.9,4.9,1.8,7.4,2.6c2.5,0.8,5,1.7,7.4,2.7
+			s4.6,2.1,6.4,3.6c1.9,1.5,3.4,3.2,4.6,5.4c1.2,2.1,1.7,4.8,1.7,8c0,3.2-0.5,6.3-1.6,9.1c-1.1,2.8-2.7,5.3-4.8,7.4
+			c-2.1,2.1-4.7,3.8-7.7,5c-3,1.2-6.5,1.8-10.4,1.8c-2.6,0-5-0.2-7.2-0.7c-2.1-0.5-4.1-1.1-5.9-2c-1.8-0.9-3.5-1.9-5-3.2
+			c-1.5-1.3-3-2.7-4.3-4.3l0.7-1.1c0.2-0.2,0.3-0.3,0.5-0.4c0.1-0.1,0.3-0.1,0.6-0.1c0.3,0,0.6,0.2,1.1,0.7c0.5,0.5,1.1,1,1.8,1.7
+			c0.7,0.7,1.6,1.4,2.7,2.2c1,0.8,2.3,1.5,3.7,2.2c1.4,0.7,3.1,1.3,5,1.7c1.9,0.5,4,0.7,6.4,0.7c3.4,0,6.4-0.5,9.1-1.6
+			c2.7-1.1,4.9-2.5,6.8-4.4c1.8-1.8,3.2-4,4.2-6.4c1-2.5,1.5-5.1,1.5-7.9c0-3-0.6-5.4-1.7-7.4c-1.2-1.9-2.7-3.6-4.5-4.9
+			c-1.9-1.3-4-2.4-6.4-3.3c-2.4-0.9-4.9-1.7-7.4-2.5c-2.5-0.8-5-1.7-7.4-2.6c-2.4-0.9-4.6-2.2-6.4-3.6c-1.9-1.5-3.4-3.3-4.5-5.5
+			c-1.2-2.2-1.7-4.9-1.7-8.2c0-2.6,0.5-5,1.5-7.4c1-2.3,2.4-4.4,4.2-6.2c1.8-1.8,4.1-3.2,6.8-4.3c2.7-1.1,5.8-1.6,9.3-1.6
+			c3.9,0,7.4,0.6,10.5,1.9c3,1.3,5.9,3.2,8.5,5.9L653.2,333.7z"/>
+		<path fill="#FFFFFF" d="M734.4,404.1h-3.1v-38.6h-52.8v38.6h-3.1v-78.5h3.1V363h52.8v-37.5h3.1V404.1z"/>
+		<path fill="#FFFFFF" d="M762.4,404.1h-3.1v-78.5h3.1V404.1z"/>
+	</g>
+	<g>
+		<path fill="#FFFFFF" d="M167.8,451.9c0,1.7-0.6,2.9-1.9,3.8s-3,1.4-5.2,1.4c-2.4,0-4.2-0.4-5.5-1.1v-2.5c0.9,0.4,1.8,0.8,2.8,1
+			c1,0.3,1.9,0.4,2.8,0.4c1.4,0,2.5-0.2,3.3-0.7c0.8-0.5,1.1-1.1,1.1-2.1c0-0.7-0.3-1.3-0.9-1.8c-0.6-0.5-1.8-1.1-3.5-1.8
+			c-1.7-0.6-2.8-1.2-3.5-1.6c-0.7-0.5-1.2-1-1.6-1.6c-0.3-0.6-0.5-1.3-0.5-2.1c0-1.5,0.6-2.6,1.8-3.4c1.2-0.8,2.8-1.3,4.9-1.3
+			c1.9,0,3.8,0.4,5.6,1.2l-1,2.2c-1.8-0.7-3.4-1.1-4.9-1.1c-1.3,0-2.2,0.2-2.9,0.6c-0.7,0.4-1,1-1,1.7c0,0.5,0.1,0.9,0.4,1.2
+			c0.2,0.3,0.6,0.7,1.2,1c0.5,0.3,1.6,0.7,3.1,1.3c2.1,0.8,3.6,1.5,4.3,2.3C167.4,449.7,167.8,450.7,167.8,451.9z"/>
+		<path fill="#FFFFFF" d="M214.9,447.6c0.5-0.7,1.2-1.5,2.1-2.6l5.8-6.1h3.2l-7.2,7.6l7.7,10.3h-3.3l-6.3-8.4l-2,1.8v6.7h-2.7v-25.4
+			h2.7v13.5c0,0.6,0,1.5-0.1,2.8H214.9z"/>
+		<path fill="#FFFFFF" d="M267,438.9h2.9l3.9,10.2c0.9,2.3,1.4,4,1.6,5h0.1c0.1-0.6,0.4-1.5,0.9-2.8c0.5-1.3,1.9-5.5,4.4-12.4h2.9
+			l-7.7,20.3c-0.8,2-1.6,3.4-2.7,4.3c-1,0.8-2.3,1.3-3.7,1.3c-0.8,0-1.6-0.1-2.4-0.3v-2.2c0.6,0.1,1.3,0.2,2,0.2c1.9,0,3.2-1,4-3.1
+			l1-2.5L267,438.9z"/>
+		<path fill="#FFFFFF" d="M375.3,444.5c0-1.3,0.3-2.3,0.9-3c0.6-0.7,1.5-1,2.7-1c1.1,0,2,0.3,2.7,1c0.6,0.7,0.9,1.7,0.9,3
+			c0,1.3-0.3,2.3-0.9,3c-0.6,0.7-1.5,1.1-2.7,1.1c-1.2,0-2.1-0.4-2.7-1.1C375.6,446.8,375.3,445.8,375.3,444.5z"/>
+		<path fill="#FFFFFF" d="M484,457.1c-2.6,0-4.6-0.8-6-2.4c-1.4-1.6-2.1-3.8-2.1-6.8c0-3,0.7-5.3,2.2-6.9c1.4-1.6,3.5-2.4,6.2-2.4
+			c0.9,0,1.7,0.1,2.6,0.3c0.9,0.2,1.5,0.4,2,0.7l-0.8,2.3c-0.6-0.2-1.3-0.4-2-0.6c-0.7-0.2-1.3-0.2-1.9-0.2c-3.6,0-5.4,2.3-5.4,6.9
+			c0,2.2,0.4,3.9,1.3,5.1c0.9,1.2,2.2,1.8,3.9,1.8c1.5,0,3-0.3,4.6-1v2.4C487.4,456.7,485.9,457.1,484,457.1z"/>
+		<path fill="#FFFFFF" d="M535.6,456.7h-2.7v-25.4h2.7V456.7z"/>
+		<path fill="#FFFFFF" d="M583.9,438.9v11.6c0,1.5,0.3,2.5,1,3.3c0.7,0.7,1.7,1.1,3.1,1.1c1.9,0,3.2-0.5,4.1-1.5
+			c0.9-1,1.3-2.7,1.3-5v-9.4h2.7v17.9h-2.2l-0.4-2.4h-0.1c-0.6,0.9-1.3,1.6-2.3,2c-1,0.5-2.1,0.7-3.4,0.7c-2.2,0-3.8-0.5-4.9-1.5
+			c-1.1-1-1.6-2.7-1.6-5v-11.7H583.9z"/>
+		<path fill="#FFFFFF" d="M650.3,438.6c2.3,0,4.2,0.8,5.5,2.4c1.3,1.6,1.9,3.9,1.9,6.8c0,2.9-0.7,5.2-2,6.8
+			c-1.3,1.6-3.1,2.4-5.5,2.4c-1.2,0-2.2-0.2-3.2-0.6c-1-0.4-1.8-1.1-2.4-2h-0.2l-0.6,2.3H642v-25.4h2.7v6.2c0,1.4,0,2.6-0.1,3.7h0.1
+			C645.9,439.5,647.8,438.6,650.3,438.6z M649.9,440.8c-1.8,0-3.2,0.5-4,1.6c-0.8,1.1-1.2,2.8-1.2,5.4s0.4,4.3,1.3,5.4
+			c0.8,1.1,2.2,1.6,4,1.6c1.7,0,2.9-0.6,3.7-1.8c0.8-1.2,1.2-3,1.2-5.2c0-2.3-0.4-4.1-1.2-5.2C652.9,441.4,651.6,440.8,649.9,440.8z
+			"/>
+	</g>
+</g>
+</svg>
+
+<h1 class="tk-lato">Chepe como nunca lo viste</h1>
+
+<div class="home-video">
+	<div class="video-poster"><svg x="0px" y="0px"
+	  viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<g>
+	<polygon class="hoverfx" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="bevel" stroke-miterlimit="10" points="27,21 41,32 
+		27,43 	"/>
+	<path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M53.92,10.081
+		c12.107,12.105,12.107,31.732,0,43.838c-12.106,12.108-31.734,12.108-43.839,0c-12.107-12.105-12.107-31.732,0-43.838
+		C22.186-2.027,41.813-2.027,53.92,10.081z"/>
+</g>
+</svg>
+</div>
+	<div class="video-wrap">
+		<span>X</span>
+		<iframe width="560" id="youtubeframe" height="315" src="https://www.youtube.com/embed/HWsienOwkN8" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>
+
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    
+    <section class="section-float reservation">
+    	<span class="close-section">X</span>
+    		<div class="wrapper">
+		    	<div class="container">
+		    		<div class="row">
+			    		<div class="col-lg-12">
+		    		<h1>Reservar</h1>
+		    		<div id="book-a-place-scheme"><h2>Tarde</h2><p>Mesas y espacios para la tarde.</p><div id="scheme-container">
+            <script type="text/javascript">
+                var bookAPLaceEventBookingOpen = 1;
+            </script><ul id="scheme" data-event-id="" data-scheme-id="1" style="width: 150px;"><li><ul class="scheme-row clearfix"><li data-x="1" data-y="1" data-cell="1" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="2" data-y="1" data-cell="2" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="3" data-y="1" data-cell="3" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="4" data-y="1" data-cell="4" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="5" data-y="1" data-cell="5" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li></ul></li><li><ul class="scheme-row clearfix"><li data-x="1" data-y="2" data-cell="6" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li style="background-color: #bada55;" data-place-id="8" data-x="2" data-y="2" data-cell="7" class="scheme-cell-selectee scheme-cell scheme-cell-setted scheme-cell-seat scheme-place-8 scheme-place-available "><span class="number"></span></li><li data-x="3" data-y="2" data-cell="8" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li style="background-color: #bada55;" data-place-id="13" data-x="4" data-y="2" data-cell="9" class="scheme-cell-selectee scheme-cell scheme-cell-setted scheme-cell-seat scheme-place-13 scheme-place-available "><span class="number"></span></li><li data-x="5" data-y="2" data-cell="10" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li></ul></li><li><ul class="scheme-row clearfix"><li data-x="1" data-y="3" data-cell="11" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="2" data-y="3" data-cell="12" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="3" data-y="3" data-cell="13" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="4" data-y="3" data-cell="14" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="5" data-y="3" data-cell="15" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li></ul></li><li><ul class="scheme-row clearfix"><li data-x="1" data-y="4" data-cell="16" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="2" data-y="4" data-cell="17" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="3" data-y="4" data-cell="18" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="4" data-y="4" data-cell="19" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="5" data-y="4" data-cell="20" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li></ul></li><li><ul class="scheme-row clearfix"><li data-x="1" data-y="5" data-cell="21" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li style="background-color: #bada55;" data-place-id="7" data-x="2" data-y="5" data-cell="22" class="scheme-cell-selectee scheme-cell scheme-cell-setted scheme-cell-seat scheme-place-7 scheme-place-available "><span class="number"></span></li><li data-x="3" data-y="5" data-cell="23" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li style="background-color: #bada55;" data-place-id="12" data-x="4" data-y="5" data-cell="24" class="scheme-cell-selectee scheme-cell scheme-cell-setted scheme-cell-seat scheme-place-12 scheme-place-available "><span class="number"></span></li><li data-x="5" data-y="5" data-cell="25" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li></ul></li><li><ul class="scheme-row clearfix"><li data-x="1" data-y="6" data-cell="26" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="2" data-y="6" data-cell="27" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="3" data-y="6" data-cell="28" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="4" data-y="6" data-cell="29" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="5" data-y="6" data-cell="30" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li></ul></li><li><ul class="scheme-row clearfix"><li data-x="1" data-y="7" data-cell="31" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="2" data-y="7" data-cell="32" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="3" data-y="7" data-cell="33" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="4" data-y="7" data-cell="34" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="5" data-y="7" data-cell="35" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li></ul></li><li><ul class="scheme-row clearfix"><li data-x="1" data-y="8" data-cell="36" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li style="background-color: #bada55;" data-place-id="6" data-x="2" data-y="8" data-cell="37" class="scheme-cell-selectee scheme-cell scheme-cell-setted scheme-cell-seat scheme-place-6 scheme-place-available "><span class="number"></span></li><li data-x="3" data-y="8" data-cell="38" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li style="background-color: #bada55;" data-place-id="11" data-x="4" data-y="8" data-cell="39" class="scheme-cell-selectee scheme-cell scheme-cell-setted scheme-cell-seat scheme-place-11 scheme-place-available "><span class="number"></span></li><li data-x="5" data-y="8" data-cell="40" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li></ul></li><li><ul class="scheme-row clearfix"><li data-x="1" data-y="9" data-cell="41" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="2" data-y="9" data-cell="42" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="3" data-y="9" data-cell="43" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="4" data-y="9" data-cell="44" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="5" data-y="9" data-cell="45" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li></ul></li><li><ul class="scheme-row clearfix"><li data-x="1" data-y="10" data-cell="46" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li style="background-color: #bada55;" data-place-id="9" data-x="2" data-y="10" data-cell="47" class="scheme-cell-selectee scheme-cell scheme-cell-setted scheme-cell-seat scheme-place-9 scheme-place-booked "><span class="number"></span></li><li data-x="3" data-y="10" data-cell="48" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li style="background-color: #bada55;" data-place-id="10" data-x="4" data-y="10" data-cell="49" class="scheme-cell-selectee scheme-cell scheme-cell-setted scheme-cell-seat scheme-place-10 scheme-place-available "><span class="number"></span></li><li data-x="5" data-y="10" data-cell="50" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li></ul></li><li><ul class="scheme-row clearfix"><li data-x="1" data-y="11" data-cell="51" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="2" data-y="11" data-cell="52" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="3" data-y="11" data-cell="53" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="4" data-y="11" data-cell="54" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li><li data-x="5" data-y="11" data-cell="55" class="scheme-cell-selectee scheme-cell "><span class="number"></span></li></ul></li></ul><div id="scheme-tooltips"><div id="tooltip-scheme-place-8">Status: Available<br>Mesa 3: $0.00<br></div><div id="tooltip-scheme-place-13">Status: Available<br>Mesa 6: $20,000.00<br></div><div id="tooltip-scheme-place-7">Status: Available<br>Mesa 2: $0.00<br></div><div id="tooltip-scheme-place-12">Status: Available<br>mesa 5: $20,000.00<br></div><div id="tooltip-scheme-place-6">Status: Available<br>Mesa 1: $20,000.00<br></div><div id="tooltip-scheme-place-11">Status: Available<br>mesa 4: $0.00<br></div><div id="tooltip-scheme-place-9">Status: Booked<br>Mini-barra: $20,000.00<br></div><div id="tooltip-scheme-place-10">Status: Available<br>Sala 1: $20,000.00<br></div></div></div><div id="shopping-cart-container"><h3>Cart</h3>
+    <p id="bap-countdown-container">
+        The cart will be cleared in: <span id="cart-expiration-time" class="kkcount-down" data-time-left="0" data-time="1"></span>
+    </p>
+    <table class="table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody><tr>
+        <td colspan="4">There are no places in the cart.</td>
+    </tr></tbody>
+    <tfoot>
+    <tr>
+        <th colspan="2">Total Price</th>
+        <th colspan="2">$0.00</th>
+    </tr>
+    </tfoot>
+</table></div><div id="shopping-cart-controls-container"><div id="cart-controls">
+    <input type="submit" id="cart-checkout" value="Checkout">
+</div></div>
+        
+        </div>
+	    		</div>
+		    		</div>
+		    	</div>
+    		</div>
+    </section>
+    <section class="section-float about">
+    	<span class="close-section">X</span>
+    		<div class="wrapper">
+		    	<div class="container">
+		    		<div class="row">
+			    		<div class="col-lg-12">
+							<h1>Una experiencia unica en San Jose </h1>
+							<p class="lead">Bar/Restaurante en las alturas del centro de San José, una incomparable vista con deliciosa comida y bebida.</p>
+			    		</div>
+			    		<div class="col-sm-4">
+				    		<img src="img/feat1.png" alt="feat1" class="img-responsive">
+				    		<h3>Vista Unica</h3>
+				    		<p>Incomparable vista en 360 grados del valle central, acompañado de un delicioso coctel o una cerveza bien fria. </p>
+			    		</div>
+			    		<div class="col-sm-4">
+				    		<img src="img/feat2.png" alt="feat1" class="img-responsive">
+							<h3>Delicioso Sushi</h3>
+				    		<p>Exquisito Sushi, los clásicos y los originales de la casa, con opción vegana y vegetariana, también los crujientes rollos tempura del chef. </p>
+			    		</div>
+			    		<div class="col-sm-4">
+				    		<img src="img/feat3.png" alt="feat1" class="img-responsive">
+				    		<h3>Musica Actual</h3>
+				    		<p>Variedad en géneros y estilos, por nuestros DJ's residentes o eventos con los mejores DJ's de la zona, todas las noches. </p>
+
+			    		</div>
+			    		<div class="col-sm-offset-3 col-sm-6">
+				    		<h2>Bio</h2>
+				    		<p>Situado en el <strong>noveno piso</strong> del <strong>edificio El Museo</strong> sobre <strong>avenida segunda</strong> un ambiente que procura ofrecer los mejores servicios acompañados del una hermosa vista y la mejor música electro-bailable.</p>
+			    		</div>
+		    		</div>
+		    	</div>
+    		</div>
+    </section>
+    
+    <section class="section-float contact">
+    	<span class="close-section">X</span>
+    		<div class="wrapper">
+		    	<div class="container">
+		    		<div class="row">
+		    			<div class="col-lg-12">
+			    			<h1>Contacto</h1>
+		    			</div>
+		    			<div class="col-sm-4 col-sm-offset-8">
+			    			<p><strong><span class="icon icon-basic-geolocalize-05"></span> Direccion:</strong> 200mts este del Museo Nacional sobre Avenida2, a la par de la Librería Jurídica. Piso N9., 506 San Pedro, San Jose, Costa Rica</p>
+			    			<p><strong><span class="icon icon-basic-clockwise"></span> Horario:</strong> Lunes a Domingo, 12md-2am.
+				    			
+			    			</p>
+			    			<p><strong><span class="icon icon-basic-smartphone"></span> Telefonos:</strong> 87078225,71065174</p>
+		    			</div>
+		    		</div>
+		    	</div>
+		    	 <div id="map"></div>
+    		</div>
+    </section>
+
+  
+    
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+	<script src="js/gmap3.min.js"></script> 
+    <script src="js/scripts.js"></script>
+    
+
+</body>
+
+</html>
